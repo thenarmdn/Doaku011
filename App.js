@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, Pressable, FlatList } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import {
   BannerAd,
   BannerAdSize,
@@ -12,6 +12,7 @@ const StyledView = styled(View);
 const StyledText = styled(Text);
 const StyledPressable = styled(Pressable);
 
+// ✅ Doa-doa
 const doaList = [
   {
     id: "1",
@@ -26,8 +27,13 @@ const doaList = [
       "الْـحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
     arti: "Segala puji bagi Allah yang telah menghidupkan kami setelah mematikan kami, dan kepada-Nyalah tempat kembali.",
   },
-  // Tambahkan doa lainnya di sini
+  // Tambahkan doa lainnya
 ];
+
+// ✅ Unit ID asli
+const productionAdUnitId = 'ca-app-pub-7690290806780844/3943870975';
+const isProd = !__DEV__;
+const adUnitId = isProd ? productionAdUnitId : TestIds.BANNER;
 
 export default function App() {
   const [index, setIndex] = useState(0);
@@ -64,7 +70,7 @@ export default function App() {
 
       <View className="absolute bottom-0 mb-4">
         <BannerAd
-          unitId={TestIds.BANNER} // Gunakan TestIds.BANNER untuk demo
+          unitId={adUnitId}
           size={BannerAdSize.ADAPTIVE_BANNER}
           requestOptions={{ requestNonPersonalizedAdsOnly: true }}
         />

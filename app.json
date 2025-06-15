@@ -17,8 +17,9 @@
         "backgroundColor": "#ffffff"
       },
       "config": {
-        "googleMobileAdsAppId": "ca-app-pub-3940256099942544~3347511713"
-      }
+        "googleMobileAdsAppId": "ca-app-pub-7690290806780844~4180477022"
+      },
+      "package": "com.thenarmdn.testtempo"
     },
     "web": {
       "bundler": "metro",
@@ -35,10 +36,17 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "react-native-google-mobile-ads"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "da18558d-d972-421e-ac4d-72d50d40d1bb"
+      }
     }
   }
 }
